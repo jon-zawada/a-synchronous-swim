@@ -14,14 +14,16 @@
       // header: {'Access-Control-Allow-Origin': '*'},
       // cache: false,
       //processData: false,
-      success: () => {
+      success: (data) => {
         // reload the page
-        console.log('hi')
+        // console.log('hi');
+        SwimTeam.move(data);
         //console.log(data);
       }
     })
   }
-  ajaxFetcher();
+  setInterval(ajaxFetcher, 200);
+  // ajaxFetcher();
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
   // Note: remember to fix the URL below.
