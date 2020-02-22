@@ -22,7 +22,7 @@
       }
     })
   }
-  setInterval(ajaxFetcher, 200);
+  setInterval(ajaxFetcher, 1000);
   // ajaxFetcher();
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
