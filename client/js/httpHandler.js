@@ -4,8 +4,24 @@
 
   //
   // TODO: build the swim command fetcher here
+  //function that get requests
   //
-
+  const ajaxFetcher = () => {
+    $.ajax({
+      type: 'GET',
+      // dataType: 'json',
+      url: serverUrl,
+      // header: {'Access-Control-Allow-Origin': '*'},
+      // cache: false,
+      //processData: false,
+      success: () => {
+        // reload the page
+        console.log('hi')
+        //console.log(data);
+      }
+    })
+  }
+  ajaxFetcher();
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
   // Note: remember to fix the URL below.
@@ -17,7 +33,7 @@
     $.ajax({
       type: 'POST',
       data: formData,
-      url: 'FILL_ME_IN',
+      url: serverUrl,
       cache: false,
       contentType: false,
       processData: false,
